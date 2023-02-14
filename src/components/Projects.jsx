@@ -21,8 +21,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="project-img flex-box">
-                      <a href=""><BsGithub size={25} color="orangered"/></a>
-                      <a href=""><TbView360 size={25} color="orangered"/></a>
+                      <a href="#"><BsGithub size={25} color="orangered"/></a>
+                      <a href="#"><TbView360 size={25} color="orangered"/></a>
                 </div>
               </div>
 
@@ -35,8 +35,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="project-img flex-box">
-                      <a href=""><BsGithub size={25} color="darkgreen"/></a>
-                      <a href=""><TbView360 size={25} color="darkgreen"/></a>
+                      <a href="#"><BsGithub size={25} color="darkgreen"/></a>
+                      <a href="#"><TbView360 size={25} color="darkgreen"/></a>
                 </div>
               </div>
 
@@ -50,8 +50,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="project-img flex-box">
-                      <a href=""><BsGithub size={25} color="royalblue"/></a>
-                      <a href=""><TbView360 size={25} color="royalblue"/></a>
+                      <a href="#"><BsGithub size={25} color="royalblue"/></a>
+                      <a href="#"><TbView360 size={25} color="royalblue"/></a>
                 </div>
               </div>
           </div>

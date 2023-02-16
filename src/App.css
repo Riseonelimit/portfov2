@@ -9,16 +9,36 @@
 body{
   font-family: 'Inter', sans-serif;
 
-  background: rgb(255,255,255);
-  background: linear-gradient(248deg, rgba(255,255,255,1) 0%, rgba(254,248,255,1) 76%, rgba(255,215,252,1) 100%);
-
+  background: var(--backgroundColor);
+  /* background: linear-gradient(248deg, rgba(255,255,255,1) 0%, rgba(254,248,255,1) 76%, rgba(255,215,252,1) 100%); */
+  /* background-color: var(--backgroundColor); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: black;
+  color: var(--text-color);
   /* background: rgb(249,231,255);*/
 }
-
+.dark-mode{
+  --backgroundColor : linear-gradient(248deg, #333 0%, #3f373d 76%, rgb(70, 47, 72) 100%);
+  --text-color : white;
+  --headcolor: rgb(133, 35, 136);
+  --heading:rgb(243, 113, 243);
+  transition: 0.5s;
+}
+.light-mode{
+  --backgroundColor : linear-gradient(248deg, rgba(255,255,255,1) 0%, rgba(254,248,255,1) 76%, rgba(255,215,252,1) 100%);
+  --text-color : black;
+  --headcolor: rgb(101, 27, 103);
+  --heading:rgb(96, 22, 96);
+  transition: 0.5s;
+}
+.blue-mode{
+  --backgroundColor : linear-gradient(248deg, rgba(255,255,255,1) 0%, rgba(254,248,255,1) 76%, rgba(255,215,252,1) 100%);
+  --text-color : black;
+  --headcolor: rgb(27, 100, 103);
+  --heading:rgb(22, 90, 96);
+  transition: 0.5s;
+}
 .h-screen {
   height: 100vh;
 }
@@ -38,9 +58,10 @@ body{
 }
 hr{
   border-radius: 30px;
-  background-color: black;
+  background-color: var(--text-color);
   height: 5px;
   width: 5px;
+  border: none;
 }
 
 .nav-items ul {
@@ -62,7 +83,7 @@ hr{
   transition: 0.5s;
 }
 .nav-items ul li a{
-  color: black;
+  color: var(--text-color);
   padding: 10px;
   text-decoration: none;
   transition: 0.5s;
@@ -82,8 +103,8 @@ hr{
   flex-direction: column;
 }
 .content p{
+  color: var(--text-color);
     margin: 5px;
-    color: #000;
     font-size: 1rem;
     font-weight: 500;
 }
@@ -94,11 +115,10 @@ hr{
   color: rgb(243, 113, 243);
 }
 .text h1:nth-child(2){
-  color: rgb(101, 27, 103);
+  color: var(--headcolor);
 }
 .text p{
-  color: black;
-  /* margin-left: 0; */
+  color: var(--text-color);
 }
 .background{
   z-index: -1;
@@ -152,13 +172,14 @@ hr{
   width: 70%;
 }
 .abouthr{
+  border: none;
   width: 100vh;
   background: rgb(149,0,181);
   background: linear-gradient(248deg, rgba(149,0,181,1) 0%, rgba(255,0,236,1) 100%);  
 }
 .abhead{
   font-size: 1.5rem;
-  color:  rgb(96, 22, 96);
+  color:  var(--heading);
 }
 .abbox{
   margin-top: 7rem;
@@ -206,7 +227,7 @@ hr{
   /* flex-direction: row; */
 }
 .percent{
-  color: #000;
+  color: var(--text-color);
   margin-left: 20px ;
   font-size: 0.7rem;
 }
@@ -242,6 +263,7 @@ hr{
   flex-wrap: wrap;
 }
 .card{
+  color: black;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   margin: 5px;
   padding: 7px;
@@ -308,12 +330,10 @@ hr{
   align-items: center;
   padding: 1.5rem;
   text-align: center;
-  /* color: rgb(221, 51, 201); */
   font-size: 1rem;
   font-weight: 600;
-  /* border: 2px solid; */
   border-radius: 10px;
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+  color: var(--headcolor);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   background-color: rgb(251, 189, 255);
   transition: 0.4s;
@@ -363,15 +383,18 @@ hr{
   transition: 0.4s;
 }
 .project-box{
-  flex-direction:column;
-  margin-top: 5vh;
+  width: 70vw;
+  /* overflow-y: auto; */
+  flex-wrap: wrap;
+  /* flex-direction:column; */
+  margin-top: 15vh;
 }
 .project-card{
   transition: 0.5s;
   margin: 20px;
   justify-content: space-between; 
-  /* border: 1px solid ; */
-  width: 45vw;
+  color: black;
+  width: 25vw;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -379,25 +402,24 @@ hr{
 .project-head p{
   margin-top: 20px;
 }
-.line{
-  background-color: lightcoral;
-  border: none;
-  width: 7px;
-  height: 15vh;
-  margin-right: 20px;
-}
 .line2{
   background-color: lightgreen;
   border: none;
-  width: 7px;
+  width: 7px ;
   height: 15vh;
   margin-right: 20px;
+}
+.bg-lightcoral{
+  background-color: lightcoral;
 }
 .bg-blue{
   background-color: cyan;
 }
+.bg-purple{
+  background-color: rgb(203, 12, 203);
+}
 .project-card:nth-child(1){
-  background-color: rgb(255, 209, 209);
+  background-color:  rgb(255, 209, 209);
   transition: 0.5s;
 }
 .project-card:nth-child(2){
@@ -406,6 +428,10 @@ hr{
 }
 .project-card:nth-child(3){
   background-color: rgb(180, 255, 251);
+  transition: 0.5s;
+}
+.project-card:nth-child(4){
+  background-color: rgb(255, 180, 240);
   transition: 0.5s;
 }
 
@@ -429,7 +455,7 @@ form{
 label{
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  color: rgb(96, 22, 96);
+  color: var(--heading);
   font-size: 1.5rem;
   align-self: start;
 }
@@ -460,7 +486,7 @@ textarea{
   height: 40px;
 }
 .purple_color{
-  color: rgb(96, 22, 96);
+  color: var(--headcolor);
   margin: 10px;
 }
 @media only screen  and (max-width:750px){
@@ -486,8 +512,8 @@ textarea{
     width: 85%;
 
   }
-  #skill{
-    margin-top: 20vh;
+  .headbox{
+    margin-top: 40vh;
   }
   .headbox{
     display: flex;
@@ -518,8 +544,12 @@ textarea{
   .project-card{
     margin: 20px;
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     padding: 1rem;
+  }
+  .line2{
+    width: 4px;
+    height: 8vh;
   }
   .abhead{
     font-size: 1rem;
@@ -605,6 +635,9 @@ textarea{
   .abouthr{
     width: 80vw;
   }
+  .headbox{
+    margin-top: 20vh;
+  }
   .abbox{
     margin-top: 4rem;
     flex-direction: column;
@@ -617,6 +650,10 @@ textarea{
     display: none;
   }.info{
     margin: 20px 0px;
+  }
+  .line2{
+    width: 4px;
+    height: 8vh;
   }
   .abme{
     margin-top: 5rem;

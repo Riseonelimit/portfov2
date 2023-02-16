@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <div className='headbox' id='project'>
+    <div className='headbox' id='contact'>
       <div className="head-content">
         <div className="abhead">    
             <h1>Contact Me!!</h1>

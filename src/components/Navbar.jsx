@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState ,useEffect} from 'react';
 
 
  const Navbar = () => {
@@ -10,10 +9,10 @@ import { useState ,useEffect} from 'react';
 
             <div className=" nav-items">
                 <ul>
-                    <li><a href="#about">Home</a></li><hr  />
                     <li><a href="#about">About</a></li><hr />
                     <li><a href="#skill">Skill</a></li><hr />
-                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#project">Projects</a></li><hr  />
+                    <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
 

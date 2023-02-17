@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { HiArrowSmRight} from "react-icons/hi";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -6,24 +6,11 @@ import { useEffect } from 'react';
 
 
 const Main = () => {
-    const [theme,setTheme] = useState('light-mode');
     
-    let clickHandler = ()=>{
-      if(theme === 'dark-mode'){
-        setTheme('light-mode');
-        console.log('light');
-      }
-      else {
-        setTheme('dark-mode');
-        console.log('dark');
-      }
-    }
     useEffect(() => {
       Aos.init({duration:2000});
     },[]);
-    useEffect(()=>{
-        document.body.className = theme;
-    },[theme])
+    
   return (
     <div className='main flex-box'>
         <div className="content" >
@@ -34,7 +21,7 @@ const Main = () => {
                 <p>I am Currently a Student pursuing my UG Degree , Currently working on NEW PROJECTS to gain more knowledge.</p>
             </div>
             <button className='aboutbtn' onClick="#about">About me <HiArrowSmRight/></button>
-            {/* <button onClick={()=>{clickHandler()}}>Dark Mode</button> */}
+            
         </div>
         <div className="background">
           <h1>WEB DEV</h1>

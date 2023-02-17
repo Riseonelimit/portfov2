@@ -19,24 +19,17 @@ body{
   /* background: rgb(249,231,255);*/
 }
 .dark-mode{
-  --backgroundColor : linear-gradient(248deg, #333 0%, #3f373d 76%, rgb(70, 47, 72) 100%);
+  --backgroundColor : #333;
   --text-color : white;
   --headcolor: rgb(133, 35, 136);
   --heading:rgb(243, 113, 243);
   transition: 0.5s;
 }
 .light-mode{
-  --backgroundColor : linear-gradient(248deg, rgba(255,255,255,1) 0%, rgba(254,248,255,1) 76%, rgba(255,215,252,1) 100%);
+  --backgroundColor :white;
   --text-color : black;
   --headcolor: rgb(101, 27, 103);
   --heading:rgb(96, 22, 96);
-  transition: 0.5s;
-}
-.blue-mode{
-  --backgroundColor : linear-gradient(248deg, rgba(255,255,255,1) 0%, rgba(254,248,255,1) 76%, rgba(255,215,252,1) 100%);
-  --text-color : black;
-  --headcolor: rgb(27, 100, 103);
-  --heading:rgb(22, 90, 96);
   transition: 0.5s;
 }
 .h-screen {
@@ -63,12 +56,24 @@ hr{
   width: 5px;
   border: none;
 }
-
+.nav{
+  width: 100vw;
+  /* border: 2px solid; */
+}
+.nav-items{
+  margin-left: 2vw;  
+  width: 80%;
+  /* border: 2px solid; */
+}
+.nav button{
+  all: unset;
+  /* border: 2px solid; */
+}
+.nav button img{
+  width: 2rem;
+}
 .nav-items ul {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-
 }
 .nav-items ul li{
   text-decoration: none;
@@ -78,7 +83,7 @@ hr{
   margin: 0px 10px;
 }
 .nav-items li a:hover{
-  transform: scale(1.3);
+  transform: scale(1.2);
   color: purple;
   transition: 0.5s;
 }

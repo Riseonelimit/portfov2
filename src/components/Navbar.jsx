@@ -7,8 +7,9 @@ import moon from "../assets/moon.png"
   const [image,setImage] = useState(moon);
   let clickHandler = ()=>{
     if(theme === 'dark-mode'){
-      setTheme('light-mode');
-      console.log('light');
+
+        setTheme('light-mode');
+        console.log('light');
       // setTimeout(()=>{
         setImage(moon);
         

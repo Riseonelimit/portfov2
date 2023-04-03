@@ -20,7 +20,7 @@ const Main = () => {
                 <h1 >I love to Code!! &#128525;</h1>
                 <p>I am Currently a Student pursuing my UG Degree , Currently working on NEW PROJECTS to gain more knowledge.</p>
             </div>
-            <button className='aboutbtn' onClick="#about">About me <HiArrowSmRight/></button>
+            <button className='aboutbtn'><a href="#about"> About me <HiArrowSmRight/></a></button>
             
         </div>
         <div className="background">

@@ -54,6 +54,20 @@ const keyframes = {
       translateX: container.width,
     },
   }),
+  heading3: ({ section, container }) => ({
+    [section.topAt("container-bottom")]: {
+      translateX: -container.width,
+    },
+    [section.topAt("container-top") - container.height / 4]: {
+      translateX: 0,
+    },
+    [section.topAt("container-top") + container.height / 4]: {
+      translateX: 0,
+    },
+    [section.bottomAt("container-top")]: {
+      translateX: container.width,
+    },
+  }),
 };
 
 function App() {
@@ -78,7 +92,7 @@ function App() {
         </Scroll.Item>
       </Scroll.Section>
       <Scroll.Section className="h-screen center bg-1">
-        <Scroll.Item keyframes={keyframes.heading2}>
+        <Scroll.Item keyframes={keyframes.heading1}>
           <Projects/>  
         </Scroll.Item>
       </Scroll.Section>

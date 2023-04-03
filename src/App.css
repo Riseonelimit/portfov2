@@ -20,8 +20,8 @@ body{
 }
 .dark-mode{
   --backgroundColor : #333;
-  --text-color : white;
-  --headcolor: rgb(133, 35, 136);
+  --text-color : rgb(218, 218, 218);
+  --headcolor: rgb(224, 54, 230);
   --heading:rgb(243, 113, 243);
   transition: 0.5s;
 }
@@ -158,16 +158,21 @@ hr{
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
   padding: 10px;
   background-color: transparent ;
-  color: rgb(243, 113, 243);
   transition: 0.5s;
+  color: rgb(243, 113, 243);
 }
-.aboutbtn:hover {
+.aboutbtn a{
+  text-decoration: none;
+  color: rgb(243, 113, 243);
+}
+.aboutbtn:hover{
   background-color: rgb(255, 203, 255);
   box-shadow: none;
   transform: scale(0.9) translate(20%,60%);
   border-color: transparent;
   transition: 0.5s;
 }
+
 .tent{
   /* border: 2px solid; */
   display: flex;
@@ -558,7 +563,7 @@ textarea{
   }
   .abhead{
     font-size: 1rem;
-    color:  rgb(96, 22, 96);
+    color:  var(--headcolor);
   }
   .abouthr{
     width: 80vw;
